@@ -1,0 +1,1 @@
+module.exports = '<!-- this is only an example. This component does not dynamically insert markup. -->\n<div class="dropdown hoverIntent">\n	<a class="nav-item dropdown-toggle" data-toggle="dropdown" data-target="#">\n	   <!-- ... -->\n	</a>\n	<div class="mover-shim"></div>\n	<ul class="dropdown-menu">\n		<!-- <li><a href="...">...</a></li> -->\n	</ul>\n</div>\n';

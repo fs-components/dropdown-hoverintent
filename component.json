@@ -1,0 +1,20 @@
+{
+  "name": "dropdown-hoverintent",
+  "repo": "jabapyth/dropdown-hoverintent",
+  "description": "A hoverIntentified dropdown",
+  "version": "0.0.1",
+  "keywords": [],
+  "dependencies": {
+    "component/jquery": "1.8.2"
+    },
+  "development": {},
+  "license": "MIT",
+  "main": "index.js",
+  "scripts": [
+    "index.js",
+    "jquery.hoverIntent.js"
+  ],
+  "styles": [
+    "dropdown-hoverintent.css"
+  ]
+}
