@@ -16,4 +16,4 @@ function DropDown (el, config) {
 
 module.exports = function(el, config) {
 	return new DropDown(el, config);
-}
+};
