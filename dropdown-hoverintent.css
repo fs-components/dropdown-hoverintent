@@ -44,6 +44,7 @@
   -webkit-transition: none;
   padding: 8px 20px;
   font-size: 15px;
+  text-decoration: none;
 }
 #global-engage-header .dropdown.hoverIntent .dropdown-menu li a:hover {
   background-color: #f2f2f2;
