@@ -5,6 +5,7 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
+    "jabapyth/bootstrap-dropdowns": "*"
     },
   "development": {},
   "license": "MIT",
