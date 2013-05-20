@@ -11,8 +11,7 @@
   "license": "MIT",
   "main": "index.js",
   "scripts": [
-    "index.js",
-    "jquery.hoverIntent.js"
+    "index.js"
   ],
   "styles": [
     "dropdown-hoverintent.css"
