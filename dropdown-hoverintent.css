@@ -1,3 +1,22 @@
+/** apparently header-footer doesn't care about responsiveness ... todo: add @media bounds **/
+
+/* <TnT shim> */
+
+/** this needs to be outside the experiment, otherwise we get a flicker w/ 2 visible (before the experiment class is added **/
+.tnt-accelleratorDropDownTnTExperiment-on {
+  display: none;
+}
+.tnt-accelleratorDropDownTnTExperiment-on,
+.tnt-dropdown .tnt-accelleratorDropDownTnTExperiment-off {
+  display: none;
+}
+
+.tnt-accelleratorDropDownTnTExperiment-off,
+.tnt-dropdown .tnt-accelleratorDropDownTnTExperiment-on {
+  display: block;
+}
+/* </TnT shim> */
+
 #global-engage-header .dropdown.hoverIntent.no-hover-intent:hover .dropdown-menu {
   display: block;
 }
@@ -44,6 +63,7 @@
   -webkit-transition: none;
   padding: 8px 20px;
   font-size: 15px;
+  text-decoration: none;
 }
 #global-engage-header .dropdown.hoverIntent .dropdown-menu li a:hover {
   background-color: #f2f2f2;
