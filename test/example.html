@@ -1,0 +1,147 @@
+<!DOCTYPE HTML>
+<html>
+  <head>
+    <title>Dropdown Hoverintent Example</title>
+
+    <link rel="stylesheet" href="../build/build.css">
+    <script type="text/javascript" src="../build/build.js"></script>
+    <script type="text/javascript" src="http://code.jquery.com/jquery-1.10.1.min.js"></script>
+    <link rel="stylesheet" href="http://prismjs.com/prism.css"/>
+    <script type='text/javascript' src="http://prismjs.com/prism.js"></script>
+    <!-- DEMO CSS -->
+    <style type="text/css" media="screen">
+      /* styles for the demo examples -- NOT REQUIRED for hoverIntent to work, just for demo purposes */
+      #forgot-build {
+        display: none;
+        color: #f55;
+        background-color: #fef0;
+        border: 5px solid #777;
+        text-align: center;
+      }
+      body {
+        font-family: Helvetica, arial, sans-serif;
+        padding: 20px 150px;
+      }
+      nav a.nav-item {
+        color: #4D4E4E;
+        padding: 5px 9px;
+        display: block;
+        line-height: 1em;
+        border-radius: 5px;
+      }
+      ul {
+        list-style: none;
+        position: relative;
+      }
+      div.dropdown {
+      display: inline-block;
+        border: 1px solid #777;
+        padding: 5px;
+        border-radius: 5px;
+      }
+      a {
+        text-decoration: none;
+      }
+      pre {
+        border: 2px solid #333;
+        border-radius: 15px;
+        box-shadow: 0px 0px 8px #777;
+        padding: 0;
+      }
+      pre[class*="language-"] {
+        padding: 0 1em;
+        margin-bottom: 1em;
+      }
+    </style>
+
+    <!-- DEMO JS -->
+    <script type="text/javascript" charset="utf-8">
+      $(document).ready(function(){
+        var hoverIntent, query;
+        if (!window.require) {
+          $("#forgot-build").show();
+          return;
+        }
+        ddloader = require('dropdown-hoverintent');
+        var el = $('.demo-3')[0];
+        ddloader(el, {'remove-class': 'no-hover-intent'});
+
+      }); // close document.ready
+    </script>
+  </head>
+  <body>
+    <h1>HoverIntent</h1>
+    <h2>Examples</h2>
+
+    <div id="forgot-build">
+      <h1>Looks like you forgot to build, or the component otherwise failed to load properly. Please try again.</h1>
+    </div>
+
+    <noscript><p><em>If you can see this message <strong>JavaScript is
+    disabled</strong>. This plug-in requires JavaScript to be enabled
+    in order for the examples to work.</em></p></noscript>
+
+    <h2>Not Initialized</h2>
+    <p>Doesn't show at all</p>
+    <div class="demo-1 dropdown hoverIntent">
+      <a class="nav-item" href="#a-target">Uninitialized</a>
+      <div class="mover-shim"></div>
+      <ul class="dropdown-menu">
+        <li><a href="#sub-target">Sub Target</a></li>
+        <li><a href="#sub-target1">Sub Target 1</a></li>
+        <li><a href="#sub-target2">Sub Target 2</a></li>
+        <li><a href="#sub-target3">Sub Target 3</a></li>
+      </ul>
+    </div>
+    <br>
+    <h2>Not Initialized, with no-hover-intent class</h2>
+    <p>Shows/hides on hover -- fallback in case init fails.</p>
+    <div class="demo-2 dropdown hoverIntent no-hover-intent">
+      <a class="nav-item" href="#a-target">Uninitialized</a>
+      <div class="mover-shim"></div>
+      <ul class="dropdown-menu">
+        <li><a href="#sub-target">Sub Target</a></li>
+        <li><a href="#sub-target1">Sub Target 1</a></li>
+        <li><a href="#sub-target2">Sub Target 2</a></li>
+        <li><a href="#sub-target3">Sub Target 3</a></li>
+      </ul>
+    </div>
+    <br>
+    <h2>Initialized, w/ hoverintenty goodness</h2>
+    <div class="demo-3 dropdown hoverIntent no-hover-intent">
+      <a class="nav-item" href="#a-target">Initialized</a>
+      <div class="mover-shim"></div>
+      <ul class="dropdown-menu">
+        <li><a href="#sub-target">Sub Target</a></li>
+        <li><a href="#sub-target1">Sub Target 1</a></li>
+        <li><a href="#sub-target2">Sub Target 2</a></li>
+        <li><a href="#sub-target3">Sub Target 3</a></li>
+      </ul>
+    </div>
+    <h3>HTML</h3>
+    <pre class="language-markup">
+      <code>
+&lt;div class="demo-3 dropdown hoverIntent no-hover-intent"&gt;
+  &lt;a class="nav-item" href="#a-target"&gt;Initialized&lt;/a&gt;
+  &lt;div class="mover-shim"&gt;&lt;/div&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#sub-target"&gt;Sub Target&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sub-target1"&gt;Sub Target 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sub-target2"&gt;Sub Target 2&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#sub-target3"&gt;Sub Target 3&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+      </code>
+    </pre>
+    <h3>Javascript</h3>
+    <pre class="language-javascript">
+      <code>
+var ddloader = require("dropdown-hoverintent")
+  , query = require("query")
+  , el = query(".demo-3");
+ddloader(el, {'remove-class': 'no-hover-intent'});
+      </code>
+    </pre>
+
+  </body>
+</html>

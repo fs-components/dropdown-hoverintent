@@ -5,13 +5,17 @@
   "version": "0.0.1",
   "keywords": [],
   "dependencies": {
+    "jamischarles/query-qwery": "*",
+    "component/query": "*",
+    "component/classes": "*",
+    "fs-components/hover-intent": "*",
+    "fs-components/bootstrap-dropdown-css": "*"
     },
   "development": {},
   "license": "MIT",
   "main": "index.js",
   "scripts": [
-    "index.js",
-    "jquery.hoverIntent.js"
+    "index.js"
   ],
   "styles": [
     "dropdown-hoverintent.css"
